@@ -381,14 +381,12 @@ footer{
   font-family: 'Playfair Display', serif;
 }
 
-/* ===== RESPONSIVO CELULAR ===== */
 @media(max-width:768px){
 
   /* HEADER */
   header {
     flex-direction: column;
     padding: 15px;
-
   }
 
   header img {
@@ -414,15 +412,65 @@ footer{
     padding: 8px 20px;
   }
 
+  /* remove espaço gigante */
+  .hero{
+    min-height:auto;
+    padding-bottom:40px;
+  }
+
+  /* ===== ZIG ZAG DOS CARDS DO INÍCIO ===== */
+  #inicio .produtos{
+    display:flex;
+    flex-direction:column;
+    gap:60px;
+  }
+
+  #inicio .card{
+    width:80%;
+    position:relative;
+  }
+
+  #inicio .card:nth-child(1){
+    align-self:flex-start;
+  }
+
+  #inicio .card:nth-child(2){
+    align-self:flex-end;
+  }
+
+  #inicio .card:nth-child(3){
+    align-self:flex-start;
+  }
+
+  /* LINHAS EM ZIG ZAG */
+  #inicio .card:not(:last-child)::after{
+    content:"";
+    position:absolute;
+    width:70px;
+    height:3px;
+    background:#4b0d18;
+    bottom:-30px;
+  }
+
+  #inicio .card:nth-child(1)::after{
+    right:-70px;
+    transform:rotate(20deg);
+  }
+
+  #inicio .card:nth-child(2)::after{
+    left:-70px;
+    transform:rotate(-20deg);
+  }
+
   /* SOBRE */
   .sobre {
-    flex-direction: column; /* foto em cima, texto embaixo */
+    flex-direction: column;
     gap: 20px;
     padding: 20px;
   }
 
   .sobre img {
-    width: 250px; /* reduz tamanho da foto */
+    width: 250px;
     height: 250px;
   }
 
@@ -431,12 +479,12 @@ footer{
   }
 
   .nome-fundadora {
-    font-size: 20px; /* ajusta nome da Letícia */
+    font-size: 20px;
   }
 
   /* PRODUTOS */
   .produtos {
-    grid-template-columns: 1fr; /* uma coluna só */
+    grid-template-columns: 1fr;
     gap: 15px;
     padding: 0 10px;
   }
@@ -456,70 +504,10 @@ footer{
     padding: 12px;
   }
 
-  /* SEÇÕES TÍTULOS */
+  /* TÍTULOS */
   section h2 {
     font-size: 30px;
   }
-}
-
-.fundob {
-  background-color: #fcf6f6;
-}
-
-.fundoc{
-  background-color: #fcf6f6;
-}
-#inicio .produtos{
-  display:flex;
-  flex-direction:column;
-  gap:60px;
-}
-
-/* tamanho dos cards */
-#inicio .card{
-  width:80%;
-  position:relative;
-}
-
-/* zig zag dos cards */
-#inicio .card:nth-child(1){
-  align-self:flex-start;
-}
-
-#inicio .card:nth-child(2){
-  align-self:flex-end;
-}
-
-#inicio .card:nth-child(3){
-  align-self:flex-start;
-}
-
-/* LINHA DIAGONAL ENTRE OS CARDS */
-#inicio .card:not(:last-child)::after{
-  content:"";
-  position:absolute;
-  width:80px;
-  height:4px;
-  background:#4b0d18;
-  bottom:-30px;
-}
-
-/* linha indo pra direita */
-#inicio .card:nth-child(1)::after{
-  right:-80px;
-  transform:rotate(20deg);
-}
-
-/* linha indo pra esquerda */
-#inicio .card:nth-child(2)::after{
-  left:-80px;
-  transform:rotate(-20deg);
-}
-
-/* remove altura gigante */
-.hero{
-  min-height:auto;
-  padding-bottom:40px;
 }
 
 
