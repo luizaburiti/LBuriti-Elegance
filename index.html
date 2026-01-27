@@ -434,12 +434,25 @@ footer{
     font-size: 20px;
   }
 
-  /* PRODUTOS */
-  .produtos {
-    grid-template-columns: 1fr;
-    gap: 15px;
-    padding: 0 10px;
-  }
+/* ZIG ZAG SOMENTE NO CELULAR */
+#inicio .produtos{
+  display:flex;
+  flex-direction:column;
+  gap:60px;
+  align-items:center;
+}
+
+#inicio .card{
+  width:80%;
+}
+
+#inicio .left{
+  align-self:flex-start;
+}
+
+#inicio .right{
+  align-self:flex-end;
+}
 
   .card h3 {
     font-size: 18px;
