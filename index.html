@@ -469,28 +469,19 @@ footer{
 .fundoc{
   background-color: #fcf6f6;
 }
-/* ORGANIZA OS CARDS EM ZIG-ZAG */
 #inicio .produtos{
   display:flex;
   flex-direction:column;
-  gap:40px;
+  gap:60px;
+}
+
+/* tamanho dos cards */
+#inicio .card{
+  width:80%;
   position:relative;
 }
 
-/* LINHA VINHO */
-#inicio .produtos::before{
-  content:"";
-  position:absolute;
-  left:50%;
-  top:0;
-  width:4px;
-  height:100%;
-  background:#4b0d18;
-  transform:translateX(-50%);
-  border-radius:10px;
-}
-
-/* ZIG ZAG */
+/* zig zag dos cards */
 #inicio .card:nth-child(1){
   align-self:flex-start;
 }
@@ -503,10 +494,34 @@ footer{
   align-self:flex-start;
 }
 
-/* AJUSTE TAMANHO NO CELULAR */
-#inicio .card{
-  width:80%;
+/* LINHA DIAGONAL ENTRE OS CARDS */
+#inicio .card:not(:last-child)::after{
+  content:"";
+  position:absolute;
+  width:80px;
+  height:4px;
+  background:#4b0d18;
+  bottom:-30px;
 }
+
+/* linha indo pra direita */
+#inicio .card:nth-child(1)::after{
+  right:-80px;
+  transform:rotate(20deg);
+}
+
+/* linha indo pra esquerda */
+#inicio .card:nth-child(2)::after{
+  left:-80px;
+  transform:rotate(-20deg);
+}
+
+/* remove altura gigante */
+.hero{
+  min-height:auto;
+  padding-bottom:40px;
+}
+
 
 </style>
 </head>
