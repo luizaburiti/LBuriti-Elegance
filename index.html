@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>LBuriti Elegance</title>
+<link rel ="icon" href="./WhatsApp Image 2026-01-26 at 11.38.00.jpeg">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#fff;
+  color:#333;
+}
+
+/* HEADER */
+header{
+  background:#550505;
+  padding:20px 20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:40px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+header img{
+  height:80px;
+}
+
+nav a{
+  color:white;
+  margin-left:25px;
+  text-decoration:none;
+  font-size:20px;
+  position:relative;
+}
+
+nav a::after{
+  content:"";
+  width:0%;
+  height:2px;
+  background:white;
+  position:absolute;
+  left:0;
+  bottom:-5px;
+  transition:.4s;
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
+/* SECTIONS FULL PAGE */
+section{
+
+  padding:100px 40px;
+  text-align:center;
+  scroll-margin-top:80px;
+}
+
+
+
+
+section.aparecer{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* HERO  iniciooooo */
+
+#inicio .card{
+    
+  aspect-ratio:1 / 1;
+  width:220px;           /* menor */
+  background:white;
+  border:2px solid #4b0d18;
+  border-radius:20px;
+  padding:15px;
+  box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:120px 20px;
+  background-color: #fcf6f6;
+}
+
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:65px;
+  color: #4b0d18;
+}
+
+.hero p{
+  font-size:24px;
+  margin-top:5px;
+}
+
+.colecao{
+  display:inline-block;
+  margin-top:70px;
+  margin-bottom:50px ;
+  background:#4b0d18;
+  color:#ffffff;
+  padding:10px 25px;
+  border-radius:50px;
+  text-decoration:none;
+  font-size:18px;
+  transition:.3s;
+}
+
+.colecao:hover{
+  transform:scale(1.1);
+  background:rgb(46, 18, 18);
+}
+
+.fundov{
+    background: #fcf6f6;
+}
+
+.btn:hover{
+  background:#4b0d18;
+  color:white;
+  transform:scale(1.08);
+}
+
+/* TITULOS */
+section h2{
+  font-family:'Playfair Display',serif;
+  font-size:45px;
+  color:#4b0d18;
+  margin-bottom:40px;
+}
+
+/* SOBRE */
+.sobre{
+    margin-bottom: 60px;
+  display:flex;
+  gap:60px;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  padding: 10px 20px;
+}
+
+.sobre img{
+  width:360px;
+  height:360px;
+  border-radius:50%;
+  object-fit:cover;
+  box-shadow:0 10px 30px rgba(0,0,0,.3);
+  transition:.4s;
+}
+
+.sobre img:hover{
+  transform:scale(1.08);
+}
+
+.sobre p{
+  max-width:550px;
+  font-size:27px;
+}
+.fundoS {
+    background: #fcf6f6;
+}
+
+/* PRODUTOS */
+.produtos{
+  
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+  max-width:1200px;
+  margin:auto;
+  background-color: #fcf6f6;
+}
+
+.card{
+  background:white;
+  border-radius:25px;
+  padding:15px;
+  box-shadow:0 10px 30px rgba(0,0,0,.2);
+  transition:.4s;
+  cursor:pointer;
+}
+
+.card:hover{
+  transform:translateY(-12px) scale(1.05);
+}
+
+.card img{
+  width:100%;
+  border-radius:20px;
+  margin-bottom:10px;
+}
+
+.card h3{
+  font-size:20px;
+}
+
+.card p{
+  font-size:18px;
+  color:#4b0d18;
+  font-weight:bold;
+}
+
+/* FUNDO */
+.fundo{
+  background:#fcf6f6;
+}
+
+/* CONTATO */
+#contato{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+form{
+  max-width:450px;
+  margin:auto;
+}
+
+input,textarea{
+  width:100%;
+  padding:15px;
+  margin:12px 0;
+  border-radius:12px;
+  border:1px solid #ccc;
+  font-size:16px;
+}
+
+button{
+  background:#4b0d18;
+  color:white;
+  padding:15px;
+  width:100%;
+  border:none;
+  border-radius:12px;
+  font-size:18px;
+  transition:.3s;
+  
+}
+
+
+
+button:hover{
+  background:black;
+}
+
+.enviar{
+ 
+  display:block;
+  width:100%;
+  margin-top:15px;
+  background:#4b0d18;   /* mesma cor do botão */
+  color:white;
+  padding:15px;
+  border-radius:12px;
+  text-decoration:none;
+  font-size:18px;
+  text-align:center;
+  transition:.4s;
+}
+
+.enviar:hover{
+  background:#4b0d18;
+}
+
+
+
+.enviar:hover{
+  transform:scale(1.1);
+}
+.whats{
+ 
+  display:block;
+  width:100%;
+  margin-top:15px;
+  background:#4b0d18;   /* mesma cor do botão */
+  color:white;
+  padding:15px;
+  border-radius:12px;
+  text-decoration:none;
+  font-size:18px;
+  text-align:center;
+  transition:.4s;
+}
+
+.whats:hover{
+  background:rgb(32, 1, 1);
+}
+
+
+
+.whats:hover{
+  transform:scale(1.1);
+}
+
+.insta{
+  display:block;
+  width:100%;
+  margin-top:15px;
+  background: rgb(68, 3, 3) ;
+  color:white;
+  padding:15px;
+  border-radius:12px;
+  text-decoration:none;
+  font-size:18px;
+  text-align:center;
+  transition:.4s;
+}
+
+
+.insta:hover{
+  transform:scale(1.05);
+  filter:brightness(1.1);
+}
+
+
+/* FOOTER */
+footer{
+  background:#4b0d18;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+  header{
+    flex-direction:column;
+    gap:15px;
+  }
+  .hero h1{
+    font-size:40px;
+  }
+}
+
+.caixa-contato{
+  background:white;
+  padding:40px;
+  border-radius:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,.2);
+  max-width:450px;
+  width:100%;
+  border:2px solid #4b0d18; /* BORDA */
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.foto-container {
+  display: flex;
+  flex-direction: column; /* Coloca nome abaixo da foto */
+  align-items: center;    /* Centraliza horizontalmente */
+  gap: 35px;              /* Espaço entre a foto e o nome */
+}
+
+.nome-fundadora {
+  font-size: 35px;
+  font-weight: 100px;
+  color: #4b0d18;
+  font-family: 'Playfair Display', serif;
+}
+
+/* ===== RESPONSIVO CELULAR ===== */
+@media(max-width:768px){
+
+  /* HEADER */
+  header {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  header img {
+    height: 90px;
+  }
+
+  nav a {
+    margin: 8px 0;
+    font-size: 18px;
+  }
+
+  /* HERO */
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .colecao {
+    font-size: 16px;
+    padding: 8px 20px;
+  }
+
+  /* SOBRE */
+  .sobre {
+    flex-direction: column; /* foto em cima, texto embaixo */
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .sobre img {
+    width: 250px; /* reduz tamanho da foto */
+    height: 250px;
+  }
+
+  .sobre p {
+    font-size: 20px;
+  }
+
+  .nome-fundadora {
+    font-size: 20px; /* ajusta nome da Letícia */
+  }
+
+  /* PRODUTOS */
+  .produtos {
+    grid-template-columns: 1fr; /* uma coluna só */
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+
+  .card p {
+    font-size: 16px;
+  }
+
+  /* CONTATO */
+  .enviar, .whats, .insta {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  /* SEÇÕES TÍTULOS */
+  section h2 {
+    font-size: 30px;
+  }
+}
+
+.fundob {
+  background-color: #fcf6f6;
+}
+
+.fundoc{
+  background-color: #fcf6f6;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="./WhatsApp Image 2026-01-26 at 11.38.00.jpeg" alt="Logo">
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#vestidos">Vestidos</a>
+    <a href="#bolsas">Bolsas</a>
+    <a href="#blusas">Blusas</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<section id="inicio" class="hero">
+  <h1>Moda Feminina de Luxo</h1>
+  <p>Elegância que veste você</p>
+  <a href="#vestidos" class="colecao">Ver coleção</a>
+
+  <div class="produtos" style="margin-top:60px;">
+    <div class="card">
+      <h3>Elegância, Modéstia e Estilo</h3>
+      <p>Moda evangélica e juvenil</p>
+    </div>
+
+    <div class="card">
+      <h3>Enviamos para todo o Brasil</h3>
+      <p>Entrega rápida e segura</p>
+    </div>
+
+    <div class="card">
+      <h3>Pronta entrega</h3>
+      <p>Indaiatuba e Itapecerica da Serra</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="sobre" class="fundoS">
+  <div class="sobre">
+    <div class="foto-container">
+      <img src="leticia foto.jpg" alt="Fundadora">
+      <h1 class="nome-fundadora">Letícia Buriti</h1> <!-- Fica abaixo da foto -->
+    </div>
+    <div>
+      <h2>Sobre mim</h2>
+      <p>
+        Sou a fundadora da LBuriti Elegance, apaixonada por moda e por proporcionar
+        uma experiência única de sofisticação e confiança para cada mulher.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="vestidos" class="fundov">
+  <h2>Vestidos</h2>
+  <div class="produtos">
+    <div class="card"><img src="./leticia foto.jpg"><h3>Vestido 1</h3><p>R$ 199</p></div>
+    <div class="card"><img src="./leticia foto.jpg"><h3>Vestido 2</h3><p>R$ 189</p></div>
+    <div class="card"><img src="./leticia foto.jpg"><h3>Vestido 3</h3><p>R$ 179</p></div>
+    <div class="card"><img src="./leticia foto.jpg"><h3>Vestido 4</h3><p>R$ 209</p></div>
+    <div class="card"><img src="./leticia foto.jpg"><h3>Vestido 5</h3><p>R$ 199</p></div>
+    <div class="card"><img src="./leticia foto.jpg"><h3>Vestido 6</h3><p>R$ 189</p></div>
+    <div class="card"><img src="./leticia foto.jpg"><h3>Vestido 7</h3><p>R$ 179</p></div>
+    <div class="card"><img src="./leticia foto.jpg"><h3>Vestido 8</h3><p>R$ 209</p></div>
+  </div>
+</section>
+
+<section id="bolsas" class="fundob">
+  <h2>Bolsas</h2>
+  <div class="produtos">
+    <div class="card"><img src="./leticia foto.jpg"><h3>Bolsa 1</h3><p>R$ 149</p></div>
+    <div class="card"><img src="./leticia foto.jpg"><h3>Bolsa 2</h3><p>R$ 139</p></div>
+    <div class="card"><img src="./leticia foto.jpg"><h3>Bolsa 3</h3><p>R$ 159</p></div>
+    <div class="card"><img src="./leticia foto.jpg"><h3>Bolsa 4</h3><p>R$ 169</p></div>
+    <div class="card"><img src="./leticia foto.jpg"><h3>Bolsa 5</h3><p>R$ 149</p></div>
+    <div class="card"><img src="./leticia foto.jpg"><h3>Bolsa 6</h3><p>R$ 139</p></div>
+    <div class="card"><img src="./leticia foto.jpg"><h3>Bolsa 7</h3><p>R$ 159</p></div>
+    <div class="card"><img src="./leticia foto.jpg"><h3>Bolsa 8</h3><p>R$ 169</p></div>
+  </div>
+</section>
+
+<section id="blusas" class="fundob">
+  <h2>Blusas</h2>
+  <div class="produtos">
+    <div class="card"><img src="./leticia foto.jpg"><h3>Blusa 1</h3><p>R$ 199</p></div>
+    <div class="card"><img src="./leticia foto.jpg"><h3>Blusa 2</h3><p>R$ 189</p></div>
+    <div class="card"><img src="./leticia foto.jpg"><h3>Blusa 3</h3><p>R$ 179</p></div>
+    <div class="card"><img src="./leticia foto.jpg"><h3>Blusa 4</h3><p>R$ 209</p></div>
+    <div class="card"><img src="./leticia foto.jpg"><h3>Cropped 5</h3><p>R$ 199</p></div>
+    <div class="card"><img src="./leticia foto.jpg"><h3>Cropped 6</h3><p>R$ 189</p></div>
+    <div class="card"><img src="./leticia foto.jpg"><h3>Cropped 7</h3><p>R$ 179</p></div>
+    <div class="card"><img src="./leticia foto.jpg"><h3>Cropped 8</h3><p>R$ 209</p></div>
+  </div>
+</section>
+
+<section id="contato" class="fundoc">
+  <div class="caixa-contato">
+    <h2>Contato</h2>
+
+    <form onsubmit="enviarWhats(event)">
+      <input id="nome" placeholder="Seu nome" required>
+      <textarea id="mensagem" placeholder="Sua mensagem" required></textarea>
+      <button class="enviar">Enviar no WhatsApp</button>
+
+
+    </form>
+
+    <a class="whats" href="https://wa.me/551199401-8861" target="_blank">
+      Falar direto no WhatsApp
+    </a>
+    <a class="insta" href="https://instagram.com/lburitielegance" target="_blank">
+  Ir para o Instagram
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 LBuriti Elegance
+</footer>
+
+<script>
+function enviarWhats(e){
+  e.preventDefault();
+  let nome=document.getElementById("nome").value;
+  let msg=document.getElementById("mensagem").value;
+  let numero="5511994018861";
+  let texto=`Olá, meu nome é ${nome}. ${msg}`;
+  let url=`https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+  window.open(url,"_blank");
+}
+
+const sections=document.querySelectorAll("section");
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("aparecer");
+    }
+  });
+},{threshold:0.2});
+
+sections.forEach(sec=>observer.observe(sec));
+</script>
+
+</body>
+</html>
