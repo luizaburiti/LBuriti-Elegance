@@ -408,10 +408,24 @@ footer{
     padding-bottom:40px;
   }
 
-  /* cards do início no celular */
+  /* ===== ZIG ZAG SOMENTE NO INÍCIO ===== */
   #inicio .produtos{
-    grid-template-columns: 1fr;
-    margin-top:30px;
+    display:flex;
+    flex-direction:column;
+    gap:60px;
+    align-items:center;
+  }
+
+  #inicio .card{
+    width:80%;
+  }
+
+  #inicio .card:nth-child(odd){
+    align-self:flex-start;
+  }
+
+  #inicio .card:nth-child(even){
+    align-self:flex-end;
   }
 
   /* SOBRE */
@@ -434,25 +448,12 @@ footer{
     font-size: 20px;
   }
 
-/* ZIG ZAG SOMENTE NO CELULAR */
-#inicio .produtos{
-  display:flex;
-  flex-direction:column;
-  gap:60px;
-  align-items:center;
-}
-
-#inicio .card{
-  width:80%;
-}
-
-#inicio .left{
-  align-self:flex-start;
-}
-
-#inicio .right{
-  align-self:flex-end;
-}
+  /* PRODUTOS */
+  .produtos {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 0 10px;
+  }
 
   .card h3 {
     font-size: 18px;
@@ -475,14 +476,6 @@ footer{
   }
 }
 
-/* zig-zag SÓ no celular (cards do início) */
-#inicio .left {
-  transform: translateX(-25px);
-}
-
-#inicio .right {
-  transform: translateX(25px);
-}
 
 </style>
 </head>
@@ -507,18 +500,18 @@ footer{
   <a href="#vestidos" class="colecao">Ver coleção</a>
 
   <div class="produtos" style="margin-top:60px;">
-    <div class="card left">
+    <div class="card">
       <h3>Elegância, Modéstia e Estilo</h3>
       <p>Moda evangélica e juvenil</p>
       <h1></h1>
     </div>
 
-    <div class="card right">
+    <div class="card">
       <h3>Enviamos para todo o Brasil</h3>
       <p>Entrega rápida e segura</p>
     </div>
 
-    <div class="card left">
+    <div class="card">
       <h3>Pronta entrega</h3>
       <p>Indaiatuba e Itapecerica da Serra</p>
     </div>
