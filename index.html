@@ -406,36 +406,27 @@ footer{
     padding-bottom:40px;
   }
 
-  /* ===== COLUNA COM LINHA NO MEIO (SÓ NO INÍCIO) ===== */
+  /* ===== CARDS DO INÍCIO (SÓ NO CELULAR) ===== */
   #inicio .produtos{
     display:flex;
     flex-direction:column;
-    gap:60px;
-    position:relative;
-  }
-
-  /* linha do meio */
-  #inicio .produtos::before{
-    content:"";
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:50%;
-    width:3px;
-    background:#4b0d18; /* vinho */
-    transform:translateX(-50%);
+    gap:40px;
   }
 
   #inicio .card{
-    width:75%;
+    width:80%;
   }
 
-  #inicio .card:nth-child(odd){
+  #inicio .card:nth-child(1){
     align-self:flex-start;
   }
 
-  #inicio .card:nth-child(even){
+  #inicio .card:nth-child(2){
     align-self:flex-end;
+  }
+
+  #inicio .card:nth-child(3){
+    align-self:flex-start;
   }
 
   /* SOBRE */
@@ -485,22 +476,6 @@ footer{
     font-size: 30px;
   }
 }
-/* ===== LAYOUT TIMELINE SÓ NO INÍCIO (FORÇADO) ===== */
-#inicio .produtos{
-  display:flex !important;
-  flex-direction:column;
-  gap:60px;
-  position:relative;
-}
-
-/* linha única no meio */
-#inicio .produtos::before{
-  content:"";
-  position:absolute;
-  top:0;
-  bottom:0
-}
-
 
 </style>
 </head>
