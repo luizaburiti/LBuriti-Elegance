@@ -370,7 +370,6 @@ footer{
   color: #4b0d18;
   font-family: 'Playfair Display', serif;
 }
-
 @media(max-width:768px){
 
   /* HEADER */
@@ -402,22 +401,33 @@ footer{
     padding: 8px 20px;
   }
 
-  /* remove espaço gigante entre início e sobre */
   .hero{
     min-height:auto;
     padding-bottom:40px;
   }
 
-  /* ===== ZIG ZAG SOMENTE NO INÍCIO ===== */
+  /* ===== COLUNA COM LINHA NO MEIO (SÓ NO INÍCIO) ===== */
   #inicio .produtos{
     display:flex;
     flex-direction:column;
     gap:60px;
-    align-items:center;
+    position:relative;
+  }
+
+  /* linha do meio */
+  #inicio .produtos::before{
+    content:"";
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:50%;
+    width:3px;
+    background:#4b0d18; /* vinho */
+    transform:translateX(-50%);
   }
 
   #inicio .card{
-    width:80%;
+    width:75%;
   }
 
   #inicio .card:nth-child(odd){
@@ -475,6 +485,7 @@ footer{
     font-size: 30px;
   }
 }
+
 
 
 </style>
