@@ -485,7 +485,21 @@ footer{
     font-size: 30px;
   }
 }
+/* ===== LAYOUT TIMELINE SÓ NO INÍCIO (FORÇADO) ===== */
+#inicio .produtos{
+  display:flex !important;
+  flex-direction:column;
+  gap:60px;
+  position:relative;
+}
 
+/* linha única no meio */
+#inicio .produtos::before{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0
+}
 
 
 </style>
