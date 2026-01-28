@@ -95,7 +95,8 @@ section.aparecer{
 }
 
 .hero{
-  min-height:100vh;
+   margin-bottom: none;
+  min-height:30vh;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -346,6 +347,8 @@ footer{
 }
 
 /* RESPONSIVO */
+
+ /* RESPONSIVO */
 @media(max-width:768px){
   header{
     flex-direction:column;
@@ -355,27 +358,12 @@ footer{
     font-size:40px;
   }
 
-  /* Modificações para os cards no início no celular */
-  #inicio .produtos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 80px; /* Distância maior entre os cards */
-  }
-
-  #inicio .card {
-    width: 70%; /* Largura ajustada para mobile */
-    position: relative;
-  }
-
-  #inicio .card:nth-child(odd) {
-    align-self: flex-start; /* Card ímpar à esquerda */
-  }
-
-  #inicio .card:nth-child(even) {
-    align-self: flex-end; /* Card par à direita */
+  /* Reduzir o padding das seções para menos espaço vertical no celular */
+  section {
+    padding: 50px 20px; /* Menos padding top/bottom para aproximar as seções */
   }
 }
+
 
 .caixa-contato{
   background:white;
