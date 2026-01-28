@@ -67,9 +67,6 @@ section{
   scroll-margin-top:80px;
 }
 
-
-
-
 section.aparecer{
   opacity:1;
   transform:translateY(0);
@@ -80,7 +77,7 @@ section.aparecer{
 #inicio .card{
     
   aspect-ratio:1 / 1;
-  width:240px;           /* menor */
+  width:240px;
   background:#fcf6f6;
   border:2px solid #4b0d18;
   border-radius:20px;
@@ -259,21 +256,17 @@ button{
   border-radius:12px;
   font-size:18px;
   transition:.3s;
-  
 }
-
-
 
 button:hover{
   background:black;
 }
 
 .enviar{
- 
   display:block;
   width:100%;
   margin-top:15px;
-  background:#4b0d18;   /* mesma cor do botão */
+  background:#4b0d18;
   color:white;
   padding:15px;
   border-radius:12px;
@@ -285,19 +278,14 @@ button:hover{
 
 .enviar:hover{
   background:#4b0d18;
-}
-
-
-
-.enviar:hover{
   transform:scale(1.1);
 }
+
 .whats{
- 
   display:block;
   width:100%;
   margin-top:15px;
-  background:#4b0d18;   /* mesma cor do botão */
+  background:#4b0d18;
   color:white;
   padding:15px;
   border-radius:12px;
@@ -309,11 +297,6 @@ button:hover{
 
 .whats:hover{
   background:rgb(32, 1, 1);
-}
-
-
-
-.whats:hover{
   transform:scale(1.1);
 }
 
@@ -331,12 +314,10 @@ button:hover{
   transition:.4s;
 }
 
-
 .insta:hover{
   transform:scale(1.05);
   filter:brightness(1.1);
 }
-
 
 /* FOOTER */
 footer{
@@ -347,8 +328,6 @@ footer{
 }
 
 /* RESPONSIVO */
-
- /* RESPONSIVO */
 @media(max-width:768px){
   header{
     flex-direction:column;
@@ -357,13 +336,10 @@ footer{
   .hero h1{
     font-size:40px;
   }
-
-  /* Reduzir o padding das seções para menos espaço vertical no celular */
   section {
-    padding: 50px 20px; /* Menos padding top/bottom para aproximar as seções */
+    padding: 50px 20px;
   }
 }
-
 
 .caixa-contato{
   background:white;
@@ -372,7 +348,7 @@ footer{
   box-shadow:0 10px 30px rgba(0,0,0,.2);
   max-width:450px;
   width:100%;
-  border:2px solid #4b0d18; /* BORDA */
+  border:2px solid #4b0d18;
   box-shadow:0 10px 30px rgba(0,0,0,.15);
 }
 
@@ -384,6 +360,60 @@ footer{
   background-color: #fcf6f6;
 }
 
+/* ===== MODAL (ADICIONADO) ===== */
+.modal{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.7);
+  justify-content:center;
+  align-items:center;
+  z-index:3000;
+}
+
+.modal-conteudo{
+  background:white;
+  padding:20px;
+  border-radius:20px;
+  max-width:90%;
+  max-height:90%;
+  text-align:center;
+  position:relative;
+}
+
+.modal-conteudo img{
+  max-width:100%;
+  max-height:60vh;
+  border-radius:15px;
+}
+
+.fechar{
+  position:absolute;
+  top:10px;
+  right:20px;
+  font-size:30px;
+  cursor:pointer;
+}
+
+.btn-comprar{
+  display:inline-block;
+  margin-top:15px;
+  background:#4b0d18;
+  color:white;
+  padding:12px 25px;
+  border-radius:30px;
+  text-decoration:none;
+  font-size:18px;
+  transition:.3s;
+}
+
+.btn-comprar:hover{
+  background:black;
+  transform:scale(1.05);
+}
 </style>
 </head>
 
@@ -425,12 +455,11 @@ footer{
   </div>
 </section>
 
-
 <section id="sobre" class="fundoS">
   <div class="sobre">
     <div class="foto-container">
       <img src="leticia foto.jpg" alt="Fundadora">
-      <h1 class="nome-fundadora">Letícia Buriti</h1> <!-- Fica abaixo da foto -->
+      <h1 class="nome-fundadora">Letícia Buriti</h1>
     </div>
     <div>
       <h2>Sobre mim</h2>
@@ -445,15 +474,22 @@ footer{
 <section id="vestidos" class="fundov">
   <h2>Vestidos</h2>
   <div class="produtos">
-    <div class="card"><img src="./vestido1.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
-    <div class="card"><img src="./vestido2.jpeg"><h3>Vestido 2</h3><p>R$ 150</p></div>
-    <div class="card"><img src="./vestido3.jpeg"><h3>Vestido 3</h3><p>R$ 150</p></div>
-    <div class="card"><img src="./vestido 4.jpeg"><h3>Vestido 4</h3><p>R$ 150</p></div>
-    <div class="card"><img src="./vestido5.jpeg"><h3>Vestido 5</h3><p>R$ 150</p></div>
-    <div class="card"><img src="./vestido6.jpeg"><h3>Vestido 6</h3><p>R$ 150</p></div>
-    <div class="card"><img src="./vestido7.jpeg"><h3>Vestido 7</h3><p>R$ 150</p></div>
-    <div class="card"><img src="./vestido8.jpeg"><h3>Vestido 8</h3><p>R$ 150</p></div>
-    <div class="card"><img src="./vestido9.jpeg"><h3>Vestido 9</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido1.jpeg','Vestido Serena','150')"><img src="./vestido1.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido2.jpeg','Vestido Serena','150')"><img src="./vestido2.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido3.jpeg','Vestido Serena','150')"><img src="./vestido3.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido 4.jpeg','Vestido Serena','150')"><img src="./vestido 4.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido5.jpeg','Vestido Serena','150')"><img src="./vestido5.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido6.jpeg','Vestido Serena','150')"><img src="./vestido6.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido10.jpeg','Vestido Serena','150')"><img src="./vestido10.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido11.jpeg','Vestido Serena','150')"><img src="./vestido11.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido9.jpeg','Vestido Jade','150')"><img src="./vestido9.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido7.jpeg','Vestido Jade','150')"><img src="./vestido7.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido8.jpeg','Vestido Jade','150')"><img src="./vestido8.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido12.jpeg','Vestido Jade','150')"><img src="./vestido12.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido13.jpeg','Vestido Jade','150')"><img src="./vestido13.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido14.jpeg','Vestido Jade','150')"><img src="./vestido14.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido15.jpeg','Vestido Jade','150')"><img src="./vestido15.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./vestido16.jpeg','Vestido Jade','150')"><img src="./vestido16.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
 
   </div>
 </section>
@@ -461,27 +497,27 @@ footer{
 <section id="bolsas" class="fundob">
   <h2>Bolsas</h2>
   <div class="produtos">
-    <div class="card"><img src="./bolsa5.jpeg"><h3>Bolsa 1</h3><p>R$ 100</p></div>
-    <div class="card"><img src="./bolsa2.jpeg"><h3>Bolsa 2</h3><p>R$ 100</p></div>
-    <div class="card"><img src="./bolsa3.jpeg"><h3>Bolsa 3</h3><p>R$ 100</p></div>
-    <div class="card"><img src="./bolsa4.jpeg"><h3>Bolsa 4</h3><p>R$ 150</p></div>
-    <div class="card"><img src="./bolsa1.jpeg"><h3>Bolsa 5</h3><p>R$ 120</p></div>
-    <div class="card"><img src="./bolsa6.jpeg"><h3>Bolsa 6</h3><p>R$ 150</p></div>
-    <div class="card"><img src="./bolsa7.jpeg"><h3>Bolsa 7</h3><p>R$ 120</p></div>
-   
+    <div class="card" onclick="abrirModal('./bolsa5.jpeg','Bolsa 1','100')"><img src="./bolsa5.jpeg"><h3>Bolsa 1</h3><p>R$ 100</p></div>
+    <div class="card" onclick="abrirModal('./bolsa2.jpeg','Bolsa 2','100')"><img src="./bolsa2.jpeg"><h3>Bolsa 2</h3><p>R$ 100</p></div>
+    <div class="card" onclick="abrirModal('./bolsa3.jpeg','Bolsa 3','100')"><img src="./bolsa3.jpeg"><h3>Bolsa 3</h3><p>R$ 100</p></div>
+    <div class="card" onclick="abrirModal('./bolsa4.jpeg','Bolsa 4','150')"><img src="./bolsa4.jpeg"><h3>Bolsa 4</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./bolsa1.jpeg','Bolsa 5','120')"><img src="./bolsa1.jpeg"><h3>Bolsa 5</h3><p>R$ 120</p></div>
+    <div class="card" onclick="abrirModal('./bolsa6.jpeg','Bolsa 6','150')"><img src="./bolsa6.jpeg"><h3>Bolsa 6</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('./bolsa7.jpeg','Bolsa 7','120')"><img src="./bolsa7.jpeg"><h3>Bolsa 7</h3><p>R$ 120</p></div>
   </div>
 </section>
 
 <section id="blusas" class="fundob">
   <h2>Blusas</h2>
   <div class="produtos">
-    <div class="card"><img src="./blusa1.jpeg"><h3>Blusa 1</h3><p>R$ 30</p></div>
-    <div class="card"><img src="./blusa2.jpeg"><h3>Blusa 2</h3><p>R$ 30</p></div>
-    <div class="card"><img src="./blusa3.jpeg"><h3>Blusa 3</h3><p>R$ 30</p></div>
-    <div class="card"><img src="./blusa4.jpeg"><h3>Blusa 4</h3><p>R$ 30</p></div>
-    <div class="card"><img src="./blusa5.jpeg"><h3>Blusa 5</h3><p>R$ 30</p></div>
-    <div class="card"><img src="./bolsa6.jpeg"><h3>Blusa 6</h3><p>R$ 30</p></div>
-    
+    <div class="card" onclick="abrirModal('./blusa1.jpeg','Blusa 1','30')"><img src="./blusa1.jpeg"><h3>Blusa 1</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('./blusa2.jpeg','Blusa 2','30')"><img src="./blusa2.jpeg"><h3>Blusa 2</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('./blusa3.jpeg','Blusa 3','30')"><img src="./blusa3.jpeg"><h3>Blusa 3</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('./blusa4.jpeg','Blusa 4','30')"><img src="./blusa4.jpeg"><h3>Blusa 4</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('./blusa5.jpeg','Blusa 5','30')"><img src="./blusa5.jpeg"><h3>Blusa 5</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('./blusa6.jpeg','Blusa 6','30')"><img src="./bolsa6.jpeg"><h3>Blusa 6</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('./blusa9.jpeg','Blusa 6','30')"><img src="./bolsa9.jpeg"><h3>Blusa 6</h3><p>R$ 30</p></div>
+
   </div>
 </section>
 
@@ -493,15 +529,13 @@ footer{
       <input id="nome" placeholder="Seu nome" required>
       <textarea id="mensagem" placeholder="Sua mensagem" required></textarea>
       <button class="enviar">Enviar no WhatsApp</button>
-
-
     </form>
 
-    <a class="whats" href="https://wa.me/551199401-8861" target="_blank">
+    <a class="whats" href="https://wa.me/5511994018861" target="_blank">
       Falar direto no WhatsApp
     </a>
     <a class="insta" href="https://instagram.com/lburitielegance" target="_blank">
-  Ir para o Instagram
+      Ir para o Instagram
     </a>
 
   </div>
@@ -510,6 +544,17 @@ footer{
 <footer>
   © 2026 LBuriti Elegance
 </footer>
+
+<!-- MODAL -->
+<div id="modal" class="modal" onclick="fecharModal()">
+  <div class="modal-conteudo" onclick="event.stopPropagation()">
+    <span class="fechar" onclick="fecharModal()">×</span>
+    <img id="modal-img">
+    <h3 id="modal-nome"></h3>
+    <p id="modal-preco"></p>
+    <a id="btn-whats" class="btn-comprar" target="_blank">Comprar pelo WhatsApp</a>
+  </div>
+</div>
 
 <script>
 function enviarWhats(e){
@@ -532,6 +577,23 @@ const observer=new IntersectionObserver(entries=>{
 },{threshold:0.2});
 
 sections.forEach(sec=>observer.observe(sec));
+
+let numeroWhats = "5511994018861";
+
+function abrirModal(img,nome,preco){
+  document.getElementById("modal").style.display="flex";
+  document.getElementById("modal-img").src=img;
+  document.getElementById("modal-nome").innerText=nome;
+  document.getElementById("modal-preco").innerText="R$ " + preco;
+
+  let mensagem = `Olá, quero comprar o ${nome} por R$ ${preco}`;
+  let link = `https://wa.me/${numeroWhats}?text=${encodeURIComponent(mensagem)}`;
+  document.getElementById("btn-whats").href = link;
+}
+
+function fecharModal(){
+  document.getElementById("modal").style.display="none";
+}
 </script>
 
 </body>
