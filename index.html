@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>LBuriti Elegance</title>
-<link rel ="icon" href="./WhatsApp Image 2026-01-26 at 11.38.00.jpeg">
+<link rel ="icon" href="fotoslb/logolb.jpeg">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
@@ -415,13 +415,97 @@ footer{
   background:black;
   transform:scale(1.05);
 }
+:root{
+    --red: #4b0d18;
+    --green: #00ff9c;
+    --main-color: #4b0d18;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: var(--red);
+}
+
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+/* ICONES SOCIAL (LinkedIn / GitHub) */
+.footer .social a{
+    font-size: 25px;
+    color: white;
+    border: 2px solid white;   /* BORDA BRANCA */
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;        /* DEIXA CIRCULAR */
+    margin: 0 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.footer .social a:hover{
+    transform: scale(1.2) translateY(-10px);
+    background-color: white;  /* FUNDO BRANCO */
+    color: var(--red);        /* ICONE FICA VERMELHO */
+    box-shadow: 0 0 25px white;
+}
+
+/* LISTA DE LINKS */
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.footer ul li a{
+    text-decoration: none;
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.7s ease-in-out;
+}
+
+/* HOVER BRANCO NOS LINKS */
+.footer ul li a:hover{
+    border-bottom: 3px solid white; /* LINHA BRANCA */
+}
+
+.footer .copyright{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+.footer .social a img{
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+
+
 </style>
 </head>
 
 <body>
 
 <header>
-  <img src="./WhatsApp Image 2026-01-26 at 11.38.00.jpeg" alt="Logo">
+  <img src="fotoslb/logolb.jpeg" alt="Logo">
   <nav>
     <a href="#inicio">Início</a>
     <a href="#sobre">Sobre</a>
@@ -459,7 +543,7 @@ footer{
 <section id="sobre" class="fundoS">
   <div class="sobre">
     <div class="foto-container">
-      <img src="leticia foto.jpg" alt="Fundadora">
+      <img src="fotoslb/leticia foto.jpg" alt="Fundadora">
       <h1 class="nome-fundadora">Letícia Buriti</h1>
     </div>
     <div>
@@ -475,80 +559,81 @@ footer{
 <section id="vestidos" class="fundov">
   <h2>Vestidos</h2>
   <div class="produtos">
-    <div class="card" onclick="abrirModal('./vestido1.jpeg','Vestido Serena','150')"><img src="./vestido1.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
-    <div class="card" onclick="abrirModal('./vestido2.jpeg','Vestido Serena','150')"><img src="./vestido2.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
-    <div class="card" onclick="abrirModal('./vestido3.jpeg','Vestido Serena','150')"><img src="./vestido3.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
-    <div class="card" onclick="abrirModal('./vestido 4.jpeg','Vestido Serena','150')"><img src="./vestido 4.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
-    <div class="card" onclick="abrirModal('./vestido5.jpeg','Vestido Serena','150')"><img src="./vestido5.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
-    <div class="card" onclick="abrirModal('./vestido6.jpeg','Vestido Serena','150')"><img src="./vestido6.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
-    <div class="card" onclick="abrirModal('./vestido10.jpeg','Vestido Serena','150')"><img src="./vestido10.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
-    <div class="card" onclick="abrirModal('./vestido11.jpeg','Vestido Serena','150')"><img src="./vestido11.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
-    <div class="card" onclick="abrirModal('./vestido9.jpeg','Vestido Jade','150')"><img src="./vestido9.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
-    <div class="card" onclick="abrirModal('./vestido7.jpeg','Vestido Jade','150')"><img src="./vestido7.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
-    <div class="card" onclick="abrirModal('./vestido8.jpeg','Vestido Jade','150')"><img src="./vestido8.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
-    <div class="card" onclick="abrirModal('./vestido12.jpeg','Vestido Jade','150')"><img src="./vestido12.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
-    <div class="card" onclick="abrirModal('./vestido13.jpeg','Vestido Jade','150')"><img src="./vestido13.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
-    <div class="card" onclick="abrirModal('./vestido14.jpeg','Vestido Jade','150')"><img src="./vestido14.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
-    <div class="card" onclick="abrirModal('./vestido15.jpeg','Vestido Jade','150')"><img src="./vestido15.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
-    <div class="card" onclick="abrirModal('./vestido16.jpeg','Vestido Jade','150')"><img src="./vestido16.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
-    <div class="card" onclick="abrirModal('./vestido017.jpeg','Conjunto Stella','220')"><img src="./vestido017.jpeg"><h3>Conjunto Stella</h3><p>R$ 220</p></div>
-    <div class="card" onclick="abrirModal('./vestido018.jpeg','Conjunto Stella','220')"><img src="./vestido018.jpeg"><h3>Conjunto Stella</h3><p>R$ 220</p></div>
-    <div class="card" onclick="abrirModal('./vestido19.jpeg','Conjunto Stella','220')"><img src="./vestido19.jpeg"><h3>Conjunto Stella</h3><p>R$ 220</p></div>
-    <div class="card" onclick="abrirModal('./vestido20.jpeg','Conjunto Stella','220')"><img src="./vestido20.jpeg"><h3>Conjunto Stella</h3><p>R$ 220</p></div>
-    <div class="card" onclick="abrirModal('./vestido25.jpeg','Vestido Celine','160')"><img src="./vestido25.jpeg"><h3>Vestido Celine</h3><p>R$ 160</p></div>
-    <div class="card" onclick="abrirModal('./vestido26.png','Vestido Celine','160')"><img src="./vestido26.png"><h3>Vestido Celine</h3><p>R$ 160</p></div>
-    <div class="card" onclick="abrirModal('./vestido21.jpeg','Vestido Celine','160')"><img src="./vestido21.jpeg"><h3>Vestido Celine</h3><p>R$ 160</p></div>
-    <div class="card" onclick="abrirModal('./vestido24.jpeg','Vestido Celine','160')"><img src="./vestido24.jpeg"><h3>Vestido Celine</h3><p>R$ 160</p></div>
-    <div class="card" onclick="abrirModal('./vestido23.jpeg','Vestido Celine','160')"><img src="./vestido23.jpeg"><h3>Vestido Celine</h3><p>R$ 160</p></div>
-    <div class="card" onclick="abrirModal('./vestido30.jpeg','Vestido Clarice','160')"><img src="./vestido30.jpeg"><h3>Vestido Clarice</h3><p>R$ 160</p></div>
-    <div class="card" onclick="abrirModal('./vestido32.jpeg','Vestido Clarice','160')"><img src="./vestido32.jpeg"><h3>Vestido Clarice</h3><p>R$ 160</p></div>
-    <div class="card" onclick="abrirModal('./vestido33.jpeg','Vestido Clarice','160')"><img src="./vestido33.jpeg"><h3>Vestido Clarice</h3><p>R$ 160</p></div>
-    <div class="card" onclick="abrirModal('./vestido27.jpeg','Vestido Clarice','160')"><img src="./vestido27.jpeg"><h3>Vestido Clarice</h3><p>R$ 160</p></div>
-    <div class="card" onclick="abrirModal('./vestido2.jpeg','Vestido Clarice','160')"><img src="./vestido28.jpeg"><h3>Vestido Clarice</h3><p>R$ 160</p></div>
-    <div class="card" onclick="abrirModal('./vestido29.jpeg','Vestido Clarice','160')"><img src="./vestido29.jpeg"><h3>Vestido Clarice</h3><p>R$ 160</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido1.jpeg','Vestido Serena','150')"><img src="fotoslb/vestido1.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido2.jpeg','Vestido Serena','150')"><img src="fotoslb/vestido2.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido3.jpeg','Vestido Serena','150')"><img src="fotoslb/vestido3.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido 4.jpeg','Vestido Serena','150')"><img src="fotoslb/vestido 4.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido5.jpeg','Vestido Serena','150')"><img src="fotoslb/vestido5.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido6.jpeg','Vestido Serena','150')"><img src="fotoslb/vestido6.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido10.jpeg','Vestido Serena','150')"><img src="fotoslb/vestido10.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido11.jpeg','Vestido Serena','150')"><img src="fotoslb/vestido11.jpeg"><h3>Vestido Serena</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido9.jpeg','Vestido Jade','150')"><img src="fotoslb/vestido9.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido7.jpeg','Vestido Jade','150')"><img src="fotoslb/vestido7.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido8.jpeg','Vestido Jade','150')"><img src="fotoslb/vestido8.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido12.jpeg','Vestido Jade','150')"><img src="fotoslb/vestido12.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido13.jpeg','Vestido Jade','150')"><img src="fotoslb/vestido13.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido14.jpeg','Vestido Jade','150')"><img src="fotoslb/vestido14.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido15.jpeg','Vestido Jade','150')"><img src="fotoslb/vestido15.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido16.jpeg','Vestido Jade','150')"><img src="fotoslb/vestido16.jpeg"><h3>Vestido Jade</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido17.jpeg','Conjunto Stella','220')"><img src="fotoslb/vestido17.jpeg"><h3>Conjunto Stella</h3><p>R$ 220</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido18.jpeg','Conjunto Stella','220')"><img src="fotoslb/vestido18.jpeg"><h3>Conjunto Stella</h3><p>R$ 220</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido19.jpeg','Conjunto Stella','220')"><img src="fotoslb/vestido19.jpeg"><h3>Conjunto Stella</h3><p>R$ 220</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido20.jpeg','Conjunto Stella','220')"><img src="fotoslb/vestido20.jpeg"><h3>Conjunto Stella</h3><p>R$ 220</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido25.jpeg','Vestido Celine','160')"><img src="fotoslb/vestido25.jpeg"><h3>Vestido Celine</h3><p>R$ 160</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido26.png','Vestido Celine','160')"><img src="fotoslb/vestido26.png"><h3>Vestido Celine</h3><p>R$ 160</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido21.jpeg','Vestido Celine','160')"><img src="fotoslb/vestido21.jpeg"><h3>Vestido Celine</h3><p>R$ 160</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido24.jpeg','Vestido Celine','160')"><img src="fotoslb/vestido24.jpeg"><h3>Vestido Celine</h3><p>R$ 160</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido23.jpeg','Vestido Celine','160')"><img src="fotoslb/vestido23.jpeg"><h3>Vestido Celine</h3><p>R$ 160</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido30.jpeg','Vestido Clarice','160')"><img src="fotoslb/vestido30.jpeg"><h3>Vestido Clarice</h3><p>R$ 160</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido32.jpeg','Vestido Clarice','160')"><img src="fotoslb/vestido32.jpeg"><h3>Vestido Clarice</h3><p>R$ 160</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido33.jpeg','Vestido Clarice','160')"><img src="fotoslb/vestido33.jpeg"><h3>Vestido Clarice</h3><p>R$ 160</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido27.jpeg','Vestido Clarice','160')"><img src="fotoslb/vestido27.jpeg"><h3>Vestido Clarice</h3><p>R$ 160</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido2.jpeg','Vestido Clarice','160')"><img src="fotoslb/vestido28.jpeg"><h3>Vestido Clarice</h3><p>R$ 160</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/vestido29.jpeg','Vestido Clarice','160')"><img src="fotoslb/vestido29.jpeg"><h3>Vestido Clarice</h3><p>R$ 160</p></div>
+    
   </div>
 </section>
 
 <section id="bolsas" class="fundob">
   <h2>Bolsas</h2>
   <div class="produtos">
-    <div class="card" onclick="abrirModal('./bolsa5.jpeg','Bolsa 1','100')"><img src="./bolsa5.jpeg"><h3>Bolsa 1</h3><p>R$ 100</p></div>
-    <div class="card" onclick="abrirModal('./bolsa2.jpeg','Bolsa 2','100')"><img src="./bolsa2.jpeg"><h3>Bolsa 2</h3><p>R$ 100</p></div>
-    <div class="card" onclick="abrirModal('./bolsa3.jpeg','Bolsa 3','100')"><img src="./bolsa3.jpeg"><h3>Bolsa 3</h3><p>R$ 100</p></div>
-    <div class="card" onclick="abrirModal('./bolsa4.jpeg','Bolsa 4','150')"><img src="./bolsa4.jpeg"><h3>Bolsa 4</h3><p>R$ 150</p></div>
-    <div class="card" onclick="abrirModal('./bolsa1.jpeg','Bolsa 5','120')"><img src="./bolsa1.jpeg"><h3>Bolsa 5</h3><p>R$ 120</p></div>
-    <div class="card" onclick="abrirModal('./bolsa6.jpeg','Bolsa 6','150')"><img src="./bolsa6.jpeg"><h3>Bolsa 6</h3><p>R$ 150</p></div>
-    <div class="card" onclick="abrirModal('./bolsa7.jpeg','Bolsa 7','120')"><img src="./bolsa7.jpeg"><h3>Bolsa 7</h3><p>R$ 120</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/bolsa5.jpeg','Bolsa 1','100')"><img src="fotoslb/bolsa5.jpeg"><h3>Bolsa 1</h3><p>R$ 100</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/bolsa2.jpeg','Bolsa 2','100')"><img src="fotoslb/bolsa2.jpeg"><h3>Bolsa 2</h3><p>R$ 100</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/bolsa3.jpeg','Bolsa 3','100')"><img src="fotoslb/bolsa3.jpeg"><h3>Bolsa 3</h3><p>R$ 100</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/bolsa4.jpeg','Bolsa 4','150')"><img src="fotoslb/bolsa4.jpeg"><h3>Bolsa 4</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/bolsa1.jpeg','Bolsa 5','120')"><img src="fotoslb/bolsa1.jpeg"><h3>Bolsa 5</h3><p>R$ 120</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/bolsa6.jpeg','Bolsa 6','150')"><img src="fotoslb/bolsa6.jpeg"><h3>Bolsa 6</h3><p>R$ 150</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/bolsa7.jpeg','Bolsa 7','120')"><img src="fotoslb/bolsa7.jpeg"><h3>Bolsa 7</h3><p>R$ 120</p></div>
   </div>
 </section>
 
 <section id="blusas" class="fundob">
   <h2>Blusas</h2>
   <div class="produtos">
-    <div class="card" onclick="abrirModal('./blusa1.jpeg','Blusa Luna','30')"><img src="./blusa1.jpeg"><h3>Blusa Luna</h3><p>R$ 30</p></div>
-    <div class="card" onclick="abrirModal('./blusa2.jpeg','Blusa Luna','30')"><img src="./blusa2.jpeg"><h3>Blusa Luna</h3><p>R$ 30</p></div>
-    <div class="card" onclick="abrirModal('./blusa3.jpeg','Blusa Luna','30')"><img src="./blusa3.jpeg"><h3>Blusa Luna</h3><p>R$ 30</p></div>
-    <div class="card" onclick="abrirModal('./blusa4.jpeg','Blusa Luna','30')"><img src="./blusa4.jpeg"><h3>Blusa Luna</h3><p>R$ 30</p></div>
-    <div class="card" onclick="abrirModal('./blusa5.jpeg','Blusa Luna','30')"><img src="./blusa5.jpeg"><h3>Blusa Luna</h3><p>R$ 30</p></div>
-    <div class="card" onclick="abrirModal('./blusa6.jpeg','Blusa Luna','30')"><img src="./blusa6.jpeg"><h3>Blusa Luna</h3><p>R$ 30</p></div>
-    <div class="card" onclick="abrirModal('./blusa9.jpeg','Blusa Luna','30')"><img src="./blusa9.jpeg"><h3>Blusa Luna</h3><p>R$ 30</p></div>
-    <div class="card" onclick="abrirModal('./blusa25.jpeg','Blusa Luna','30')"><img src="./blusa25.jpeg"><h3>Blusa Luna</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/blusa1.jpeg','Blusa Luna','30')"><img src="fotoslb/blusa1.jpeg"><h3>Blusa Luna</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/blusa2.jpeg','Blusa Luna','30')"><img src="fotoslb/blusa2.jpeg"><h3>Blusa Luna</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/blusa3.jpeg','Blusa Luna','30')"><img src="fotoslb/blusa3.jpeg"><h3>Blusa Luna</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/blusa4.jpeg','Blusa Luna','30')"><img src="fotoslb/blusa4.jpeg"><h3>Blusa Luna</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/blusa5.jpeg','Blusa Luna','30')"><img src="fotoslb/blusa5.jpeg"><h3>Blusa Luna</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/blusa6.jpeg','Blusa Luna','30')"><img src="fotoslb/blusa6.jpeg"><h3>Blusa Luna</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/blusa9.jpeg','Blusa Luna','30')"><img src="fotoslb/blusa9.jpeg"><h3>Blusa Luna</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/blusa25.jpeg','Blusa Luna','30')"><img src="fotoslb/blusa25.jpeg"><h3>Blusa Luna</h3><p>R$ 30</p></div>
 
-    <div class="card" onclick="abrirModal('./blusa10.jpeg','Blusa Aurora','30')"><img src="./blusa10.jpeg"><h3>Blusa Aurora</h3><p>R$ 30</p></div>
-    <div class="card" onclick="abrirModal('./blusa11.jpeg','Blusa Aurora','30')"><img src="./blusa11.jpeg"><h3>Blusa Aurora</h3><p>R$ 30</p></div>
-    <div class="card" onclick="abrirModal('./blusa12.jpeg','Blusa Aurora','30')"><img src="./blusa12.jpeg"><h3>Blusa Aurora</h3><p>R$ 30</p></div>
-    <div class="card" onclick="abrirModal('./blusa13.jpeg','Blusa Aurora','30')"><img src="./blusa13.jpeg"><h3>Blusa Aurora</h3><p>R$ 30</p></div>
-    <div class="card" onclick="abrirModal('./blusa14.jpeg','Blusa Aurora','30')"><img src="./blusa14.jpeg"><h3>Blusa Aurora</h3><p>R$ 30</p></div>
-    <div class="card" onclick="abrirModal('./blusa15.jpeg','Blusa Aurora','30')"><img src="./blusa15.jpeg"><h3>Blusa Aurora</h3><p>R$ 30</p></div>
-    <div class="card" onclick="abrirModal('./blusa16.jpeg','Blusa Aurora','30')"><img src="./blusa16.jpeg"><h3>Blusa Aurora</h3><p>R$ 30</p></div>
-    <div class="card" onclick="abrirModal('./blusa17.jpeg','Blusa Ruby','30')"><img src="./blusa17.jpeg"><h3>Blusa Ruby</h3><p>R$ 30</p></div>
-    <div class="card" onclick="abrirModal('./blusa18.jpeg','Blusa Ruby','30')"><img src="./blusa18.jpeg"><h3>Blusa Ruby</h3><p>R$ 30</p></div>
-    <div class="card" onclick="abrirModal('./blusa19.jpeg','Blusa Ruby','30')"><img src="./blusa19.jpeg"><h3>Blusa Ruby</h3><p>R$ 30</p></div>
-    <div class="card" onclick="abrirModal('./blusa20.jpeg','Blusa Ruby','30')"><img src="./blusa20.jpeg"><h3>Blusa Ruby</h3><p>R$ 30</p></div>
-    <div class="card" onclick="abrirModal('./blusa21.jpeg','Blusa Ruby','30')"><img src="./blusa21.jpeg"><h3>Blusa Ruby</h3><p>R$ 30</p></div>
-    <div class="card" onclick="abrirModal('./blusa22.jpeg','Blusa Ruby','30')"><img src="./blusa22.jpeg"><h3>Blusa Ruby</h3><p>R$ 30</p></div>
-    <div class="card" onclick="abrirModal('./blusa23.jpeg','Blusa Ruby','30')"><img src="./blusa23.jpeg"><h3>Blusa Ruby</h3><p>R$ 30</p></div>
-    <div class="card" onclick="abrirModal('./blusa24.jpeg','Blusa Ruby','30')"><img src="./blusa24.jpeg"><h3>Blusa Ruby</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/blusa10.jpeg','Blusa Aurora','30')"><img src="fotoslb/blusa10.jpeg"><h3>Blusa Aurora</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/blusa11.jpeg','Blusa Aurora','30')"><img src="fotoslb/blusa11.jpeg"><h3>Blusa Aurora</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/blusa12.jpeg','Blusa Aurora','30')"><img src="fotoslb/blusa12.jpeg"><h3>Blusa Aurora</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/blusa13.jpeg','Blusa Aurora','30')"><img src="fotoslb/blusa13.jpeg"><h3>Blusa Aurora</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/blusa14.jpeg','Blusa Aurora','30')"><img src="fotoslb/blusa14.jpeg"><h3>Blusa Aurora</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/blusa15.jpeg','Blusa Aurora','30')"><img src="fotoslb/blusa15.jpeg"><h3>Blusa Aurora</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/blusa16.jpeg','Blusa Aurora','30')"><img src="fotoslb/blusa16.jpeg"><h3>Blusa Aurora</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/blusa17.jpeg','Blusa Ruby','30')"><img src="fotoslb/blusa17.jpeg"><h3>Blusa Ruby</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/blusa18.jpeg','Blusa Ruby','30')"><img src="fotoslb/blusa18.jpeg"><h3>Blusa Ruby</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/blusa19.jpeg','Blusa Ruby','30')"><img src="fotoslb/blusa19.jpeg"><h3>Blusa Ruby</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/blusa20.jpeg','Blusa Ruby','30')"><img src="fotoslb/blusa20.jpeg"><h3>Blusa Ruby</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/blusa21.jpeg','Blusa Ruby','30')"><img src="fotoslb/blusa21.jpeg"><h3>Blusa Ruby</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/blusa22.jpeg','Blusa Ruby','30')"><img src="fotoslb/blusa22.jpeg"><h3>Blusa Ruby</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/blusa23.jpeg','Blusa Ruby','30')"><img src="fotoslb/blusa23.jpeg"><h3>Blusa Ruby</h3><p>R$ 30</p></div>
+    <div class="card" onclick="abrirModal('fotoslb/blusa24.jpeg','Blusa Ruby','30')"><img src="fotoslb/blusa24.jpeg"><h3>Blusa Ruby</h3><p>R$ 30</p></div>
 
 
 
@@ -575,9 +660,51 @@ footer{
   </div>
 </section>
 
-<footer>
-  © 2026 LBuriti Elegance
-</footer>
+<footer class="footer">
+        <div class="social">
+            <a href="https://wa.me/5511994018861" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp">
+
+            </a>
+            <a href="https://instagram.com/lburitielegance" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram">
+            </a>
+        </div>
+
+        <ul class="list">
+            <li>
+                <a href="#inicio">Início</a>
+            </li>
+
+            <!-- <li>
+                <a href="#projects">Projetos</a>
+            </li> -->
+
+            <li>
+                <a href="#sobre">Sobre Mim</a>
+            </li>
+
+            <li>
+                <a href="#vestidos">Vestidos</a>
+            </li>
+
+            <li>
+                <a href="#bolsas">Bolsas</a>
+            </li>
+
+            <li>
+                <a href="#blusas">Blusas</a>
+            </li>
+
+
+            <li>
+                <a href="https://wa.me/5511994018861">Contato</a>
+            </li>
+        </ul>
+        <p class="copyright">
+            © LBuriti Elegance | All Rights Reserved
+        </p>
+    </footer>
 
 <!-- MODAL -->
 <div id="modal" class="modal" onclick="fecharModal()">
